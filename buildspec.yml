@@ -8,7 +8,7 @@ phases:
   post_build:
     commands:
       - echo "Deploying files to S3..."
-      - aws s3 sync . s3://attendance-app-sayali --delete
+      - aws s3 sync . s3://attendance-app-123 --delete
 
 artifacts:
   files:
