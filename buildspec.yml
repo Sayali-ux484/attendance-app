@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "No build step required for static files"
+
+  post_build:
+    commands:
+      - echo "Deploying files to S3..."
+      - aws s3 sync . s3://attendance-app-sayali --delete
+
+artifacts:
+  files:
+    - '**/*'
